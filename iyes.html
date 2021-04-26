@@ -1,0 +1,104 @@
+{% extends 'rubricbase.html' %}
+
+{% block body %} 
+<div id="title">Decision Tree</div><br>
+<div class="container-fluid">
+<div id="score">
+    <form action="/av" method="POST">
+        <h3>Attack Vektor (AV)</h3>
+        <div id="quest"> {{ static }} </div>
+        <div id="quest"> {{ sttic }} </div>
+        <div id="quest"> {{ stic }} </div>
+        <div id="quest"> {{ stc }} </div>
+        <div id="quest"> {{ sc }} </div>
+        <div id="quest"> {{ question }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+
+<div id="score">
+    <form action="/ac" method="POST">
+        <h3>Attack Complexity (AC)</h3>
+        <div id="quest"> {{ acst }} </div>
+        <div id="quest"> {{ ques }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+
+<div id="score">
+    <form action="/pr" method="POST">
+        <h3>Priviliges Required (PR)</h3>
+        <div id="quest"> {{ prstatic }} </div>
+        <div id="quest"> {{ prsttic }} </div>
+        <div id="quest"> {{ prsttc }} </div>
+        <div id="quest"> {{ quest }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+
+<div id="score">
+    <form action="/ui" method="POST">
+        <h3>User Interaction (UI)</h3>
+        <div id="quest"> {{ uist }} </div>
+        <div id="quest"> {{ questi }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+
+<div id="score">
+    <form action="/s" method="POST">
+        <h3>Scope (S)</h3>
+        <div id="quest"> {{ sst }} </div>
+        <div id="quest"> {{ questio }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+
+<div id="score">
+    <form action="/c" method="POST">
+        <h3>Confidentiality (C)</h3>
+        <div id="quest"> {{ cstatic }} </div>
+        <div id="quest"> {{ cstatic2 }} </div>
+        <div id="quest"> {{ cquestion }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+
+<div id="score">
+    <form action="/iyes" method="POST">
+        <h3>Integrity (I)</h3>
+        <div id="quest"> {{ istatic }} </div>
+        <div id="quest"> {{ istatic2 }} </div>
+        <div id="quest"> {{ iquestion }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+
+<div id="score">
+    <form action="/a" method="POST">
+        <h3>Availability (A)</h3>
+        <div id="quest"> {{ astatic }} </div>
+        <div id="quest"> {{ astatic2 }} </div>
+        <div id="quest"> {{ aquestion }} </div><br>
+        <button type="submit" class="btn" name="y" value="y">Yes</button>
+        <button type="submit" class="btn" name="n" value="n">No</button>
+        <button type="submit" class="btn" name="u" value="u">Unkown</button>
+    </form>
+</div><br>
+</div>
+
+{% endblock%}

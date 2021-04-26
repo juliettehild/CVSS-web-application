@@ -1,0 +1,177 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+
+html {
+  font-size: 18px;
+}
+
+body{
+  background: #807f7f;
+  font-family: 'Open Sans','Helvetica Neue',Helvetica, sans-serif;
+  color: white;
+}
+
+.alert {
+  background: #549DA0;
+  height: 60px;
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  margin: 1rem;
+  text-align: center;
+  border: solid 2px #478486;
+  max-width: 900px;
+}
+
+#descr {
+  background: #e6e6e6;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #807f7f;
+  margin: 1rem;
+  text-align: left;
+  border: solid 2px #549DA0;
+}
+
+.footer{
+  background-color: rgb(172, 165, 165);
+  color: white;
+  font-size: 14px;
+  float: bottom;
+  text-align: center;
+  bottom: 0px;
+}
+
+.btn {
+  background: #a3a3a3;
+  width: 200px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  border: solid 2px #478486;
+  font-family: arial;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+} 
+
+.btn:hover {
+  background: #549DA0;
+  color: white;
+}
+
+#score {
+  color: rgb(121, 120, 120);
+  margin: 0 auto;
+  float: center;
+  background: white;
+  text-align: center;
+  line-height: 40px;
+  border: solid 5px #9b9b9c;
+  font-family: arial;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+
+.container {
+  float: center;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  max-width: 900px;
+}
+
+.container-report {
+  float: right;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  max-width: 900px;
+}
+
+.container-left {
+  float: left;
+  padding: 0 20px 0 20px;
+  max-width: 900px;
+}
+
+.container-right {
+  float: right;
+  padding: 0 20px 0 20px;
+  max-width: 900px;
+}
+
+#destree {
+  float: left;
+  margin-right: 2%;
+  background: #a2b6f8;
+  text-align: center;
+  line-height: 40px;
+  border: solid 2px #7F8C8D;
+  font-family: arial;
+  padding: 20px 20px;
+  border-radius: 5px;
+}
+
+
+.dtbtn {
+  background: #95a5a6;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  border: solid 2px #7F8C8D;
+  font-family: arial;
+  color: #2c3e50;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.rebtn {
+  background: #549DA0;
+  width: 500px;
+  height: 60px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  border: solid 2px #478486;
+  font-family: arial;
+  color: rgb(121, 120, 120);
+  border-radius: 5px;
+} 
+
+.rebtn:hover {
+  background: #478486;
+  color: white;
+}
+
+#title {
+  font-size: 28px;
+  text-align: center;
+  color: white;
+  background: #549DA0;
+  display: block;
+  line-height: 50px;
+  border: solid 2px #478486;
+  border-radius: 5px;
+  font-family: arial;
+  padding-left: 20px;
+  margin: 1rem;
+}
+
+#quest {
+  float: center;
+  text-align: center;
+  font-family: arial;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+}
+.container div {
+  background-color: red;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px; 
+  flex: 1;
+}

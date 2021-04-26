@@ -1,0 +1,93 @@
+{% extends 'rubricbase.html' %}
+
+{% block body %} 
+<div id="title">Report of the {{ cve }}</div><br>
+
+<!--
+<form action="#" method="POST">
+  <input type="email" name="email" placeholder="Enter Email" value="{{email if email}}"/>
+  <input type="submit" value="submit"/>
+</form>
+-->
+<div class="container-right">
+<!--
+  <form action="/upload" method="POST" enctype=multipart/form-data>
+    <p class="container">Filename of the existing file: <input type="text" name="oldFile" id=descr>.txt
+    <input type=submit class="btn" name="upload" value="Upload File"></p>
+  </form>
+-->
+    <form action="/logout" method="POST">
+      <button type="submit" class="btn" name="logout" value="logout">Finish session</button>
+    </form>
+</div><br><br>
+
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Categories</th>
+            <th scope="col">{{ cve }}</th>
+            <!-- <th scope="col">Upload File</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Attack Vector (AV)</th>
+            <td>{{ avTableNew }}</td>
+            <td>{{ avTableOld }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Attack Complexity (AC)</th>
+            <td>{{ acTableNew }}</td>
+            <td>{{ acTableOld }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Privileges Required (PR)</th>
+            <td>{{ prTableNew }}</td>
+            <td>{{ prTableOld }}</td>
+          </tr>
+          <tr>
+            <th scope="row">User Interaction (UI)</th>
+            <td>{{ uiTableNew }}</td>
+            <td>{{ uiTableOld }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Scope (S)</th>
+            <td>{{ sTableNew }}</td>
+            <td>{{ sTableOld }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Confidentiality (C)</th>
+            <td>{{ cTableNew }}</td>
+            <td>{{ cTableOld }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Integrity (I)</th>
+            <td>{{ iTableNew }}</td>
+            <td>{{ iTableOld }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Availability (A)</th>
+            <td>{{ aTableNew }}</td>
+            <td>{{ aTableOld }}</td>
+          </tr>
+        </tbody>
+        <tfooter>
+            <tr>
+                <th scope="row">Score</th>
+                <td>{{ sum }}</td>
+                <td>{{ finalScoreOld }}</td>
+              </tr>
+        </tfooter>
+      </table>
+</div><br>
+<div class="container">
+  <form action="/reportsend" method="POST">
+    <p class="container-report">Filename for the {{ cve }}: <input type="text" name="filename" id=descr>.txt<br>
+      <button type="submit" class="btn" name="save" value="save">Save File</button></p>
+    <p class="container-report">Description of the {{ cve }}: <textarea type="text" name="description" id=descr class="container" cols="40" rows="5"></textarea></p>
+</form>
+</div>
+
+
+{% endblock%}

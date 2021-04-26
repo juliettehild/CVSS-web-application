@@ -1,0 +1,21 @@
+{% extends 'rubricbase.html' %}
+
+{% block body %} 
+<div id="title">Start</div><br>
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %} 
+            {% for msg in messages %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="container">
+    <form action="/login" method="POST"><br><br>
+        <p>CVE Id: </p>
+        <p><input type="text" name="cve"></p>
+        <p><input type="submit" value="Start" class="btn"></p>
+    </form>
+</div><br><br><br><br><br><br><br><br>
+{% endblock%}

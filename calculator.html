@@ -1,0 +1,74 @@
+{% extends 'rubricbase.html' %}
+
+{% block body %} 
+<div id="title">CVSS Calculator - Base Score</div><br>
+<div class="container">
+        <div id="score">
+            <form action="/send" method="POST">
+                <label for="AV">Attack Vector (AV)</label><br>
+                <select class="btn" name="AV">
+                    <option value="0.85">Network (N)</option>
+                    <option value="0.62">Adjacent (A)</option>
+                    <option value="0.55">Local (L)</option>
+                    <option value="0.2">Physical (P)</option>
+                </select><br><br>            
+                    
+                <label for="AC">Attack Complexity (AC)</label><br>
+                <select class="btn" name="AC">
+                    <option value="0.77">Low (L)</option>
+                    <option value="0.44">High (H)</option>
+                </select><br><br>
+
+                <label for="PR">Priviliges Requiered (PR)</label><br>
+                <select class="btn" name="PR">
+                    <option value="0.85">None (N)</option>
+                    <option value="0.62">Low (L)</option>
+                    <option value="0.27">High (H)</option>
+                    <option value="0.68">Low, when Scope is changed</option>
+                    <option value="0.5">High, when Scope is changed</option>
+                </select><br><br>
+
+                <label for="UI">User Interaction (UI)</label><br>
+                <select class="btn" name="UI">
+                    <option value="0.85">None (N)</option>
+                    <option value="0.62">Requiered (R)</option>
+                </select><br><br>
+
+                <label for="S">Scope (S)</label><br>
+                <select class="btn" name="S">
+                    <option value="unchanged">Unchanged</option>
+                    <option value="changed">Changed</option>
+                </select><br><br>
+
+                <label for="C">Confidentiality (C)</label><br>
+                <select class="btn" name="C">
+                    <option value="0.00">None</option>
+                    <option value="0.22">Low</option>
+                    <option value="0.56">High</option>
+                </select><br><br>
+
+                <label for="I">Integrity (I)</label><br>
+                <select class="btn" name="I">
+                    <option value="0.00">None</option>
+                    <option value="0.22">Low</option>
+                    <option value="0.56">High</option>
+                </select><br><br>
+
+                <label for="A">Availibility (A)</label><br>
+                <select class="btn" name="A">
+                    <option value="0.00">None</option>
+                    <option value="0.22">Low</option>
+                    <option value="0.56">High</option>
+                </select><br><br>
+                <input type="submit" value="Calculate" class="rebtn">
+            </form>
+        </div>
+</div><br>
+
+<!--
+<button type="submit" class="btn" name="go" value="go">Save for report</button><br>
+<div class="alert">
+    <p>Base Score:                  {{ sum }}</p>
+</div>
+-->
+{% endblock%}
